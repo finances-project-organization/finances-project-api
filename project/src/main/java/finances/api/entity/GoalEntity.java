@@ -20,7 +20,7 @@ public class GoalEntity {
     private UUID id;
 
     @Column(nullable = false)
-    private Double amount ;
+    private Double amount;
 
     @Column(nullable = false)
     private LocalDate creationDate;
@@ -29,4 +29,8 @@ public class GoalEntity {
     private LocalDate deadline;
 
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private UserEntity user;
 }
