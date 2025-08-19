@@ -27,15 +27,16 @@ public class TransactionEntity {
     @Enumerated(EnumType.STRING)
     private TransactionsEnum type;
 
-    @Column(nullable = false)
-    private String category;
+    @ManyToOne
+    @JoinColumn(name = "category_id", nullable = false)
+    private CategoryTransactionEntity category;
 
     @Column(nullable = false)
     private LocalDate date;
 
     private String description;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private UserEntity user;
 }

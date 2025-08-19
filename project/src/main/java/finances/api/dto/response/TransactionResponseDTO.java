@@ -1,4 +1,4 @@
-package finances.api.dto;
+package finances.api.dto.response;
 
 import finances.api.enums.TransactionsEnum;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Builder
 @Data
-public class TransactionDTO {
+public class TransactionResponseDTO {
     private UUID id;
     private Double amount;
     private TransactionsEnum type;

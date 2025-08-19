@@ -1,16 +1,13 @@
-package finances.api.domain;
+package finances.api.dto.request;
 
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 @Data
-public class Goal {
-    private UUID id;
+public class GoalRequestDTO {
     private Double amount;
     private LocalDate creationDate;
     private LocalDate deadline;
     private String description;
-    private UUID userId;
 }
