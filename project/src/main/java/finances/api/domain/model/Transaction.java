@@ -2,7 +2,6 @@ package finances.api.domain.model;
 
 import finances.api.enums.TransactionsEnum;
 import lombok.Getter;
-import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.UUID;
